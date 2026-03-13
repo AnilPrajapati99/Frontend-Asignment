@@ -8,6 +8,7 @@ interface Patient {
   medical_issue: string;
 
   contact: [{ address: string; number: number; email: string }];
+  row: any;
 }
 
 export default function PatientRow({ row }: { row: Patient }) {
@@ -15,7 +16,6 @@ export default function PatientRow({ row }: { row: Patient }) {
     patient_id,
     patient_name,
     age,
-    photo_url,
     medical_issue,
     contact: [{ address, email, number }],
   } = row;

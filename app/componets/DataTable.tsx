@@ -10,18 +10,19 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import PatientRow from "../componets/PatientRow";
 
-interface item {
+interface Patient {
   patient_id: number;
-  name: string;
+  patient_name: string;
   age: number;
-  medical: string;
-  add: string;
-  phone: number;
-  email: string;
+  photo_url: string;
+  medical_issue: string;
+
+  contact: [{ address: string; number: number; email: string }];
+  row: any;
 }
 
 export default function BasicTable() {
-  const [rows, setRows] = useState<item[]>([]);
+  const [rows, setRows] = useState<Patient[]>([]);
 
   console.log(rows);
 
